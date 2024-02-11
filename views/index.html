@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
+</head>
+<body>
+    <h1>Hello World!</h1>
+    <p>Time is {{ .date.Format "2006/01/02 15:04:05" }}</p>
+
+    <ul>
+        <li>
+            <a href="/notes?limit=20">Notes</a>
+        </li>
+    </ul>
+
+    {{ range .Notes }}
+        <article>
+            <div>{{ .Content }}</div>
+            <p>{{ .CreatedAt }}</p>
+        </article>
+    {{ end }}
+</body>
+</html>

@@ -1,0 +1,7 @@
+# env for production
+.env
+.env.*
+!.env.example
+*.db
+*.sqlite
+*.sqlite3
